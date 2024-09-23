@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
 
 const pageTitle = "pixoul"
 ---
@@ -14,10 +16,27 @@ const pageTitle = "pixoul"
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<h1>pixoul</h1>
+		<Header/>
+        <h1>pixoul</h1>
         <a href="/projects">projects</a>
         <a href="/blog">blog</a>
         <a href="/about">about me</a>
         <Footer/>
+
+        <script>
+            document.querySelector('.hamburger').addEventListener('click', () => {
+              document.querySelector('.nav-links').classList.toggle('.expanded');
+            });
+        </script>
+
+
+        <script>
+            document.querySelector('.hamburger').addEventListener('click', () => {
+                document.getElementById('demo').innerHTML = Date();
+            });
+        </script>
+
+        <p id="demo"></p>
+
 	</body>
 </html>
