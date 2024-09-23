@@ -1,5 +1,9 @@
 ---
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import NavBar from '../components/NavBar.astro';
 
+const pageTitle = "blog"
 ---
 
 <html lang="en">
@@ -8,11 +12,19 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Tutorial</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
-        <a href="/">Home</a>
-		<h1>about me</h1>
-        <p>I'm a computer science student learning web development on the side to create a personal website and have fun.</p>
+        <NavBar/>
+		<h1>posts</h1>
+        <p>This is where my posts will pop up.</p>
+       
+       <ul>
+        <li><a href="/posts/tutorial">tutorial</a></li>
+        <li><a href="/posts/WhyandHow">Why and how I made this blog</a></li>
+        <li><a href="/posts/post-2">post 2</a></li>
+        <li><a href="/posts/post-3">post 3</a></li>
+       </ul>
+       <Footer/>
 	</body>
 </html>

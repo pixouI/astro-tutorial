@@ -1,5 +1,8 @@
 ---
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
 
+const pageTitle = "pixoul"
 ---
 
 <html lang="en">
@@ -8,14 +11,13 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Tutorial</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
-
 		<h1>pixoul</h1>
         <a href="/projects">projects</a>
         <a href="/blog">blog</a>
         <a href="/about">about me</a>
-
+        <Footer/>
 	</body>
 </html>
