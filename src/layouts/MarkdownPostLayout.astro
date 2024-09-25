@@ -1,0 +1,11 @@
+---
+const {frontmatter} = Astro.props;
+import BaseLayout from './BaseLayout.astro';
+---
+<BaseLayout pageTitle = {frontmatter.title}>
+    <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
+    <p>by: {frontmatter.author}</p>
+    <p>tags: {frontmatter.tags}</p> 
+    <br>
+    <slot/>
+</BaseLayout>
